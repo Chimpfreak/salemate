@@ -268,10 +268,10 @@ export default function WorkspaceToolsGuide() {
           </div>
 
           <Link
-            href="/preview"
-            className="w-full inline-flex items-center justify-center gap-2 py-3 rounded-full bg-white text-obsidian hover:bg-slate-100 text-xs font-bold transition"
+            href="/login"
+            className="w-full inline-flex items-center justify-center gap-2 py-3 rounded-full bg-white text-[#060510] hover:bg-slate-100 text-xs font-bold transition"
           >
-            Try Tool {activeTool.num} in Live Preview
+            Login to Try Tool {activeTool.num}
             <ArrowRight className="w-3.5 h-3.5" />
           </Link>
         </div>

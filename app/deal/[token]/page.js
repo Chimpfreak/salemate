@@ -211,7 +211,7 @@ export default function SmartDealRoomPage() {
   return (
     <div className="min-h-screen bg-canvas flex flex-col">
       {/* Header with Official Salemate Logo + Seller/Workspace Links */}
-      <header className="sticky top-0 z-30 bg-obsidian text-white border-b border-white/10">
+      <header className="sticky top-0 z-50 bg-[#060510] text-white border-b border-white/15 shadow-lg shadow-black/25">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-4">
           <div className="flex items-center gap-4">
             <Link href="/">

@@ -40,10 +40,10 @@ export default function ToolsPage() {
               </p>
             </div>
             <Link
-              href="/preview"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-obsidian hover:bg-slate-100 text-xs font-bold transition shadow-lg"
+              href="/login"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-[#060510] hover:bg-slate-100 text-xs font-bold transition shadow-lg"
             >
-              Open Live Interactive Preview
+              Login &amp; Try Workspace
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>

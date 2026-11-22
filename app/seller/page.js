@@ -86,7 +86,7 @@ export default function SellerPortalPage() {
   return (
     <div className="min-h-screen bg-canvas text-ink flex flex-col">
       {/* Top Navbar */}
-      <header className="sticky top-0 z-30 bg-obsidian text-white border-b border-white/10">
+      <header className="sticky top-0 z-50 bg-[#060510] text-white border-b border-white/15 shadow-lg shadow-black/25">
         <div className="max-w-6xl mx-auto px-5 sm:px-8 h-16 flex items-center justify-between gap-4">
           <div className="flex items-center gap-4">
             <Link href="/">

@@ -9,6 +9,8 @@ import {
   AlertTriangle,
   CheckCircle2,
   Building2,
+  Linkedin,
+  Clock,
 } from "lucide-react";
 import {
   INITIAL_DEALS,
@@ -18,6 +20,7 @@ import {
   round2,
 } from "@/lib/store";
 import { SiteHeader, SiteFooter } from "@/components/SiteChrome";
+import { FOUNDERS } from "@/lib/founders";
 import HoverChatSteps from "@/components/HoverChatSteps";
 
 const VISUAL_PORTALS = [
@@ -46,10 +49,10 @@ const VISUAL_PORTALS = [
     alt: "Frosted obsidian slabs protecting a glowing crystalline core",
   },
   {
-    href: "/preview",
-    tag: "04 · Live Sandbox",
-    title: "Test the Live Workspace",
-    subtitle: "Click through real quotes, 4-stage VAT paperwork, and Morning Batch Sweep.",
+    href: "/login",
+    tag: "04 · Private Company Desk",
+    title: "Login & Try the Workspace",
+    subtitle: "Sign in as a UAE trading company (1 user = 1 company) to run your private trading OS.",
     image: "/connector-prism.jpg",
     alt: "Emerald and sapphire light beams converging through an optical crystal prism",
   },
@@ -86,11 +89,11 @@ export default function SalemateLanding() {
     <div className="min-h-screen bg-canvas text-ink flex flex-col">
       <SiteHeader />
 
-      <main className="flex-1">
+      <main className="flex-1 overflow-x-clip">
         {/* =====================================================================
             1. CINEMATIC HERO — CLEAN, VISUAL-FIRST, ZERO CLUTTER
            ===================================================================== */}
-        <section className="relative overflow-hidden bg-obsidian text-white">
+        <section className="relative overflow-hidden bg-[#060510] text-white">
           <div className="absolute inset-0 pointer-events-none select-none overflow-hidden">
             <img
               src="/hero-ribbon.jpg"
@@ -98,8 +101,8 @@ export default function SalemateLanding() {
               aria-hidden="true"
               className="w-full h-full object-cover object-right opacity-80 animate-ribbon"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-obsidian via-obsidian/85 to-obsidian/30" />
-            <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-transparent to-obsidian/45" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#060510] via-[#060510]/85 to-[#060510]/30" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#060510] via-transparent to-[#060510]/45" />
           </div>
 
           <div className="relative max-w-7xl mx-auto px-5 sm:px-8 py-16 lg:py-24 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -108,12 +111,12 @@ export default function SalemateLanding() {
                 AI Trading Operations Service · UAE
               </p>
 
-              <h1 className="text-4xl sm:text-5xl lg:text-[3.7rem] font-bold tracking-[-0.03em] leading-[1.04]">
-                Quote high-value trades{" "}
+              <h1 className="text-4xl sm:text-5xl lg:text-[3.65rem] font-bold tracking-[-0.03em] leading-[1.06]">
+                Quote high value trades{" "}
                 <span className="font-serif italic font-normal text-sky-300 tracking-normal">
                   in sixty seconds
                 </span>
-                —never lose profit to hidden traps.
+                , never lose profit to hidden traps.
               </h1>
 
               <p className="text-base sm:text-lg text-slate-300 leading-relaxed max-w-lg">
@@ -124,10 +127,10 @@ export default function SalemateLanding() {
 
               <div className="flex flex-wrap items-center gap-3 pt-2">
                 <Link
-                  href="/preview"
-                  className="group inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-white text-obsidian hover:bg-slate-100 text-sm font-bold transition shadow-lg"
+                  href="/login"
+                  className="group inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-white text-[#060510] hover:bg-slate-100 text-sm font-bold transition shadow-lg"
                 >
-                  Try Live Demo
+                  Login &amp; Try Workspace
                   <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
                 </Link>
                 <Link
@@ -264,7 +267,7 @@ export default function SalemateLanding() {
         </section>
 
         {/* =====================================================================
-            2. SIMPLE 5-STEP STRIP — CHATBOX OPENS ON HOVER OR PHONE TOUCH
+            2. SIMPLE 5-STEP STRIP — SMOOTH IN-FLOW CHATBOX ON HOVER / TOUCH
            ===================================================================== */}
         <section className="bg-surface border-b border-slate-900/10 py-16 lg:py-20">
           <div className="max-w-7xl mx-auto px-5 sm:px-8 space-y-8">
@@ -306,13 +309,13 @@ export default function SalemateLanding() {
               <div className="flex items-center gap-2 text-xs">
                 <Link
                   href="/deal/DEAL-2026-884"
-                  className="px-4 py-2 rounded-full bg-surface border border-slate-900/15 hover:border-obsidian font-semibold text-slate-800 transition"
+                  className="px-4 py-2 rounded-full bg-surface border border-slate-900/15 hover:border-[#060510] font-semibold text-slate-800 transition"
                 >
                   Buyer Chat View
                 </Link>
                 <Link
                   href="/seller"
-                  className="px-4 py-2 rounded-full bg-surface border border-slate-900/15 hover:border-obsidian font-semibold text-slate-800 transition"
+                  className="px-4 py-2 rounded-full bg-surface border border-slate-900/15 hover:border-[#060510] font-semibold text-slate-800 transition"
                 >
                   Seller Payout View
                 </Link>
@@ -324,14 +327,14 @@ export default function SalemateLanding() {
                 <Link
                   key={card.href}
                   href={card.href}
-                  className="group relative rounded-3xl overflow-hidden bg-obsidian text-white aspect-[16/10] shadow-xl border border-slate-900/10 flex flex-col justify-end p-6 sm:p-8"
+                  className="group relative rounded-3xl overflow-hidden bg-[#060510] text-white aspect-[16/10] shadow-xl border border-slate-900/10 flex flex-col justify-end p-6 sm:p-8"
                 >
                   <img
                     src={card.image}
                     alt={card.alt}
                     className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 opacity-85"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/55 to-obsidian/10" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#060510] via-[#060510]/55 to-[#060510]/10" />
 
                   <div className="relative space-y-2">
                     <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-sky-300">
@@ -346,7 +349,7 @@ export default function SalemateLanding() {
                           {card.subtitle}
                         </p>
                       </div>
-                      <span className="w-10 h-10 rounded-full bg-white text-obsidian flex items-center justify-center shrink-0 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 shadow-md">
+                      <span className="w-10 h-10 rounded-full bg-white text-[#060510] flex items-center justify-center shrink-0 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 shadow-md">
                         <ArrowUpRight className="w-5 h-5" />
                       </span>
                     </div>
@@ -358,9 +361,50 @@ export default function SalemateLanding() {
         </section>
 
         {/* =====================================================================
-            4. COMPACT VISUAL PILOT INVITE BAR
+            4. ABOUT THIS PROJECT & BUILDERS (LINKEDIN PROFILES)
            ===================================================================== */}
-        <section className="bg-obsidian text-white py-14 border-t border-white/10">
+        <section className="bg-surface border-t border-slate-900/10 py-14">
+          <div className="max-w-7xl mx-auto px-5 sm:px-8 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
+            <div className="space-y-2">
+              <div className="inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.16em] text-indigo-700 font-bold">
+                <Clock className="w-3.5 h-3.5" />
+                This product was developed in 8 hr long tech sprint
+              </div>
+              <h2 className="text-2xl font-bold text-slate-900 tracking-tight">
+                Built with love for UAE trading teams —{" "}
+                <Link href="/about" className="font-serif italic font-normal text-indigo-800 hover:underline">
+                  About Us &amp; This Project
+                </Link>
+              </h2>
+            </div>
+
+            <div className="flex flex-wrap items-center gap-3">
+              {FOUNDERS.map((f) => (
+                <a
+                  key={f.name}
+                  href={f.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-[#0A66C2] hover:bg-[#004182] text-white text-xs font-bold transition shadow-sm"
+                >
+                  <Linkedin className="w-4 h-4" />
+                  {f.name}
+                </a>
+              ))}
+              <Link
+                href="/about"
+                className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-full border border-slate-300 bg-white hover:bg-slate-50 text-slate-800 text-xs font-semibold transition"
+              >
+                Read Story →
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* =====================================================================
+            5. COMPACT VISUAL PILOT INVITE BAR
+           ===================================================================== */}
+        <section className="bg-[#060510] text-white py-14 border-t border-white/10">
           <div className="max-w-5xl mx-auto px-5 sm:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
             <div>
               <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-sky-300">
@@ -392,7 +436,7 @@ export default function SalemateLanding() {
                 </div>
                 <button
                   type="submit"
-                  className="px-5 py-3 rounded-full bg-white text-obsidian hover:bg-slate-100 text-xs font-bold shrink-0 transition cursor-pointer"
+                  className="px-5 py-3 rounded-full bg-white text-[#060510] hover:bg-slate-100 text-xs font-bold shrink-0 transition cursor-pointer"
                 >
                   Book Pilot
                 </button>
