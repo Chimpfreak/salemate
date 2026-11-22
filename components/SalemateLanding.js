@@ -167,13 +167,19 @@ export default function SalemateLanding() {
             </a>
           </nav>
 
-          <div className="flex items-center gap-2.5">
+          <div className="flex items-center gap-2">
             <Link
               href="/deal/DEAL-2026-884"
-              className="hidden lg:inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full border border-white/15 bg-white/5 hover:bg-white/10 text-xs font-medium text-slate-200 transition"
+              className="hidden xl:inline-flex items-center gap-1 px-3 py-2 rounded-full border border-white/15 bg-white/5 hover:bg-white/10 text-xs font-medium text-slate-200 transition"
             >
               Buyer View
-              <ArrowUpRight className="w-3.5 h-3.5 text-slate-400" />
+            </Link>
+            <Link
+              id="nav-seller-view"
+              href="/seller"
+              className="hidden lg:inline-flex items-center gap-1 px-3 py-2 rounded-full border border-white/15 bg-white/5 hover:bg-white/10 text-xs font-medium text-slate-200 transition"
+            >
+              Seller View
             </Link>
             <Link
               id="nav-company-login"
@@ -799,7 +805,10 @@ export default function SalemateLanding() {
               Full Workspace
             </Link>
             <Link href="/deal/DEAL-2026-884" className="hover:text-white transition">
-              Buyer Deal Room
+              Buyer View
+            </Link>
+            <Link href="/seller" className="hover:text-white transition">
+              Seller View
             </Link>
             <span className="font-mono text-slate-500">1 USD = 3.6725 AED · 5% UAE VAT</span>
           </div>

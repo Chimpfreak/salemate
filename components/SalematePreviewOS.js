@@ -1699,12 +1699,26 @@ Return ONLY valid JSON matching the schema.`;
                 <ArrowUpRight className="w-3.5 h-3.5" />
               </Link>
             ) : (
-              <Link
-                href="/"
-                className="flex items-center gap-1 px-3 py-2 rounded-lg text-xs font-bold bg-white/10 hover:bg-white/20 text-white border border-white/15 transition"
-              >
-                ← Home
-              </Link>
+              <>
+                <Link
+                  href="/deal/DEAL-2026-884"
+                  className="hidden sm:inline-flex items-center gap-1 px-2.5 py-2 rounded-lg text-xs font-semibold bg-white/5 hover:bg-white/15 text-slate-200 border border-white/10 transition"
+                >
+                  Buyer View
+                </Link>
+                <Link
+                  href="/seller"
+                  className="hidden sm:inline-flex items-center gap-1 px-2.5 py-2 rounded-lg text-xs font-semibold bg-white/5 hover:bg-white/15 text-slate-200 border border-white/10 transition"
+                >
+                  Seller View
+                </Link>
+                <Link
+                  href="/"
+                  className="flex items-center gap-1 px-3 py-2 rounded-lg text-xs font-bold bg-white/10 hover:bg-white/20 text-white border border-white/15 transition"
+                >
+                  ← Home
+                </Link>
+              </>
             )}
           </div>
         </div>
