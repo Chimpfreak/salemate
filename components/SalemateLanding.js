@@ -23,6 +23,7 @@ import {
 } from "@/lib/store";
 import SalemateLogo from "@/components/SalemateLogo";
 import SalematePreviewOS from "@/components/SalematePreviewOS";
+import WorkspaceToolsGuide from "@/components/WorkspaceToolsGuide";
 
 const PLAIN_STEPS = [
   {
@@ -145,12 +146,15 @@ export default function SalemateLanding() {
             <SalemateLogo variant="dark" size="sm" />
           </Link>
 
-          <nav className="hidden md:flex items-center gap-7 text-xs font-medium tracking-wide text-slate-300">
+          <nav className="hidden md:flex items-center gap-6 text-xs font-medium tracking-wide text-slate-300">
             <a href="#story" className="hover:text-white transition">
               The GPU Example
             </a>
             <a href="#service" className="hover:text-white transition">
               Our Service
+            </a>
+            <a href="#tools" className="hover:text-white transition">
+              Workspace Tools
             </a>
             <a href="#live-preview" className="hover:text-white transition">
               Live Preview
@@ -579,6 +583,11 @@ export default function SalemateLanding() {
             </div>
           </div>
         </section>
+
+        {/* =====================================================================
+            CHAPTER II-B — EVERY WORKSPACE TOOL POINTED OUT & EXPLAINED SEPARATELY
+           ===================================================================== */}
+        <WorkspaceToolsGuide />
 
         {/* =====================================================================
             CHAPTER III — STUDIO-FRAMED LIVE INTERACTIVE SALEMATE PREVIEW
